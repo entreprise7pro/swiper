@@ -1,5 +1,5 @@
 /**
- * Swiper 4.4.1
+ * Swiper 4.4.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: September 14, 2018
+ * Released on: October 17, 2018
  */
 
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, data, transform, transition, on, off, trigger, transitionEnd, outerWidth, outerHeight, offset, css, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, remove, add, styles } from 'dom7/dist/dom7.modular';
@@ -2430,7 +2430,6 @@ function setBreakpoint () {
     });
 
     swiper.currentBreakpoint = breakpoint;
-
     if (typeof breakPointsParams.slidesPerGroup !== 'undefined') {
       // Use the breakpoint slidesPerGroup, otherwise we'd get the default desktop setting.
       swiper.params.slidesPerGroup = breakPointsParams.slidesPerGroup;

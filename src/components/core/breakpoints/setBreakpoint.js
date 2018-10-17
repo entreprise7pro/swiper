@@ -13,10 +13,10 @@ export default function () {
   if (breakpoint && swiper.currentBreakpoint !== breakpoint) {
     if (DEBUG) {
       // Before fixing the integer/string issue, see how it is messed up.
-      var breakPointsParams = breakpoint in breakpoints ? breakpoints[breakpoint] : swiper.originalParams;
-      console.log(typeof breakPointsParams.slidesPerView + ' = type of breakPointsParams.slidesPerView')
-      console.log(typeof breakPointsParams.slidesPerGroup + ' = type of breakPointsParams.slidesPerGroup')
-      console.log(breakPointsParams.slidesPerGroup + ' slidesPerGroup breakpoints val');
+      var breakPointsParamsDebug = breakpoint in breakpoints ? breakpoints[breakpoint] : swiper.originalParams;
+      console.log(typeof breakPointsParamsDebug.slidesPerView + ' = type of breakPointsParamsDebug.slidesPerView')
+      console.log(typeof breakPointsParamsDebug.slidesPerGroup + ' = type of breakPointsParamsDebug.slidesPerGroup')
+      console.log(breakPointsParamsDebug.slidesPerGroup + ' breakPointsParamsDebug slidesPerGroup breakpoints val');
       console.log(params.slidesPerView + ' slidesPerView params val');
       console.log(params.slidesPerGroup + ' slidesPerGroup params val');
     }
