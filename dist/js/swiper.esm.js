@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: October 17, 2018
+ * Released on: October 18, 2018
  */
 
 import { $, addClass, removeClass, hasClass, toggleClass, attr, removeAttr, data, transform, transition, on, off, trigger, transitionEnd, outerWidth, outerHeight, offset, css, each, html, text, is, index, eq, append, prepend, next, nextAll, prev, prevAll, parent, parents, closest, find, children, remove, add, styles } from 'dom7/dist/dom7.modular';
@@ -2403,7 +2403,7 @@ function setBreakpoint () {
     // Unless 'auto', these values must be integers, we must do math operations, not string concatenations.
     if (breakpoint in breakpoints && typeof breakpoints[breakpoint].slidesPerView !== 'undefined') {
       // If it's 'auto' cannot make it an integer but we can make it lowercase.
-      if (breakpoints[breakpoint].slidesPerView == 'auto' || breakpoints[breakpoint].slidesPerView == 'AUTO') {
+      if (breakpoints[breakpoint].slidesPerView === 'auto' || breakpoints[breakpoint].slidesPerView === 'AUTO') {
         breakpoints[breakpoint].slidesPerView = breakpoints[breakpoint].slidesPerView.toLowerCase();
       } else {
         // Force slidesPerView to an integer using parseInt(x, 10) (base 10).
@@ -2430,6 +2430,7 @@ function setBreakpoint () {
     });
 
     swiper.currentBreakpoint = breakpoint;
+
     if (typeof breakPointsParams.slidesPerGroup !== 'undefined') {
       // Use the breakpoint slidesPerGroup, otherwise we'd get the default desktop setting.
       swiper.params.slidesPerGroup = breakPointsParams.slidesPerGroup;
